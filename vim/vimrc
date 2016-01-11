@@ -1,15 +1,21 @@
-" execute pathogen#infect()
-" set number
-" set mouse=a
-" map <ScrollWheelUp> <C-Y>
-" map <ScrollWheelDown> <C-E>
-" let mapleader=","
-" syntax on
-" filetype plugin indent on
-" colorscheme solarized
-" set background=dark
-" set laststatus=2
-" let g:airline_powerline_fonts = 1
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'ervandew/supertab'
+Plug 'bling/vim-airline'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
+set number
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+let mapleader=","
+syntax on
+filetype plugin indent on
+colorscheme solarized
+set background=dark
+set laststatus=2
+let g:airline_powerline_fonts = 1
