@@ -58,7 +58,7 @@ dotsyncrc
 # tmux/tmuxinator
 # vim/dotvim:.vim
 vim/vimrc
-# vim/gvimrc
+vim/gvimrc
 # wget/wgetrc
 # zsh/fasdrc
 # zsh/dotzsh:.zsh
@@ -73,4 +73,5 @@ vim/vimrc
 ## hostname		type=masterhost, ANY or NONE	files=dotfile:tolink,another:tolink
 [hosts]
 htcf	git=ANY
+elwing	git=ANY
 [endhosts]
