@@ -1,0 +1,44 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt extendedglob
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/arnav/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+eval `dircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
+
+# Load antigen
+source ~/.dotfiles/antigen/antigen.zsh
+
+# Syntax highlighting bundle
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Pure prompt bundle
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
+# Tell antigen you're done
+antigen apply
+
+if [ -d /etc/profile.d ]; then
+    setopt no_nomatch
+    for i in /etc/profile.d/*.sh; do
+        if [ -r $i ]; then
+            . $i
+        fi
+    setopt nomatch
+    done
+fi
+
+alias ls='ls --color'
+alias queue='squeue | grep '`whoami`
+
+# Miniconda
+export PATH="/home/arnav/.miniconda3/bin/:"$PATH
