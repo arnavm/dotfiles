@@ -1,3 +1,4 @@
+git submodule init
 git submodule update
 # install plug (for vim plugins)
 # intall antigen (for zsh plugins)
