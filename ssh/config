@@ -1,0 +1,20 @@
+Host htcf
+    HostName htcf.wustl.edu
+    User arnav
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    IdentityFile ~/.ssh/id_rsa
+
+Host hpc
+    HostName login.chpc.wustl.edu
+    User arnav
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    IdentityFile ~/.ssh/id_rsa
+
+Host cgs
+    HostName cgscluster.wustl.edu
+    User ssankararaman
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    IdentityFile ~/.ssh/id_rsa
