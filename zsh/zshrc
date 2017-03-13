@@ -47,11 +47,11 @@ if [ $(hostname) = "htcf" ]; then
     # Import key modules
     module load tmux
     module load imgcat
-    module load transferData
+    module -q load transferData
     module load samtools
     module load bedtools
     module load java
-    module load drop-seq-tools
+    module -q load drop-seq-tools
     module load cutadapt
     module load novoalign
 fi
