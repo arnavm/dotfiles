@@ -36,7 +36,7 @@ if [ -d /etc/profile.d ]; then
 fi
 
 # HTCF-specific options
-if [ $(hostname) = "hctf" ]; then
+if [ $(hostname) = "htcf" ]; then
     eval `dircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
     alias ls='ls --color'
     alias queue='squeue | grep '`whoami`
