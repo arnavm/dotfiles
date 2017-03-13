@@ -40,5 +40,19 @@ fi
 alias ls='ls --color'
 alias queue='squeue | grep '`whoami`
 
-# Miniconda
+# For proper color rendering
+export TERM=xterm-256color
+
+# Conda
 export PATH="/home/arnav/.miniconda3/bin/:"$PATH
+
+# Import key modules
+module load tmux
+module load imgcat
+module load transferData
+module load samtools
+module load bedtools
+module load java
+module load drop-seq-tools
+module load cutadapt
+module load novoalign
