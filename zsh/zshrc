@@ -12,8 +12,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-eval `dircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
-
 # Load antigen
 source ~/.dotfiles/antigen/antigen.zsh
 
@@ -37,7 +35,9 @@ if [ -d /etc/profile.d ]; then
     done
 fi
 
+# HTCF-specific options
 if [ $(hostname) = "hctf" ]; then
+    eval `dircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
     alias ls='ls --color'
     alias queue='squeue | grep '`whoami`
 
@@ -54,4 +54,10 @@ if [ $(hostname) = "hctf" ]; then
     module load drop-seq-tools
     module load cutadapt
     module load novoalign
+fi
+
+# macOS-specific options
+if [ $(uname) = "Darwin" ]; then
+    eval `gdircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
+    alias ls='gls --color'
 fi
