@@ -37,20 +37,21 @@ if [ -d /etc/profile.d ]; then
     done
 fi
 
-alias ls='ls --color'
-alias queue='squeue | grep '`whoami`
+if [ $(hostname) = "hctf" ]; then
+    alias ls='ls --color'
+    alias queue='squeue | grep '`whoami`
 
+    # Conda
+    export PATH="/home/arnav/.miniconda3/bin/:"$PATH
 
-# Conda
-export PATH="/home/arnav/.miniconda3/bin/:"$PATH
-
-# Import key modules
-module load tmux
-module load imgcat
-module load transferData
-module load samtools
-module load bedtools
-module load java
-module load drop-seq-tools
-module load cutadapt
-module load novoalign
+    # Import key modules
+    module load tmux
+    module load imgcat
+    module load transferData
+    module load samtools
+    module load bedtools
+    module load java
+    module load drop-seq-tools
+    module load cutadapt
+    module load novoalign
+fi
