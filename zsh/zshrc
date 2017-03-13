@@ -61,3 +61,4 @@ if [ $(uname) = "Darwin" ]; then
     eval `gdircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
     alias ls='gls --color'
 fi
+
