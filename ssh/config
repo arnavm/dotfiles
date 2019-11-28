@@ -1,3 +1,8 @@
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+
 Host htcf
     HostName htcf.wustl.edu
     User arnav
