@@ -23,3 +23,8 @@ Host cgs
     ForwardX11 yes
     ForwardX11Trusted yes
     IdentityFile ~/.ssh/id_rsa
+
+Host *
+    ForwardX11 no
+    ForwardX11Trusted no
+    ForwardAgent no
