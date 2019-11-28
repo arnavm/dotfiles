@@ -1,8 +1,3 @@
-Host *
-    AddKeysToAgent yes
-    UseKeychain yes
-    IdentityFile ~/.ssh/id_rsa
-
 Host htcf
     HostName htcf.wustl.edu
     User arnav
@@ -28,3 +23,6 @@ Host *
     ForwardX11 no
     ForwardX11Trusted no
     ForwardAgent no
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
